@@ -11,6 +11,7 @@ export async function getUserById(id) {
 }
 
 export async function createUser(name, gender, email) {
+  console.log('funktion ist in createUser gelaufen');
   const data = await promises.readFile('db/users.json', 'utf-8');
   const users = JSON.parse(data);
   const newUser = {
