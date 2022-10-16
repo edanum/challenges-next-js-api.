@@ -1,6 +1,8 @@
+import {getAllUsers} from '../../../services/userService';
+
 export default async function handler(request, response) {
   if (request.method === 'GET') {
-    const data = [];
+    const data = await getAllUsers();
     return response.status(200).json(data);
   }
 
